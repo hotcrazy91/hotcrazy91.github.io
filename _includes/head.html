@@ -4,15 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
   
-  <!-- tipuesearch -->
-  <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
-  {% if page.tipue_search_active %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
-  <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
-  <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
-  {% endif %}
- 
+
   {%- seo -%}
   <link rel="shortcut icon" href="{{ site.favicon }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,6 +18,14 @@
   {%- include extensions/code-highlight.html -%}
   {%- include custom-head.html -%}
 
-
-
 </head>
+
+  <!-- tipuesearch -->
+  <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+  {% if page.tipue_search_active %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
+  {% endif %}
+ 
