@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: search
 ---
 [
     {% for post in site.posts %}
