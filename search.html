@@ -63,7 +63,15 @@ SimpleJekyllSearch({
     //         </div>
     //     </li>
     // `,
-    searchResultTemplate: '<li><a href="{url}" title="{desc}" category="{desc}" target="_blank">{title}{category}</a></li>',
+    // searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
+
+
+    searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}</a><a href="{url}" category="{desc}" target="_blank">{category}</a></li>',
+
+
+
+
+    
     // templateMiddleware: function(prop, value, template) {
     //     if (prop === 'url') {
     //         return value;
