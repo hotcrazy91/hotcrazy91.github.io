@@ -5,7 +5,7 @@ permalink: /search/
 ---
 
 
-<div class="container">
+<!-- <div class="container">
 <div class="row">
  <div class="col-12">
    <div id="search-bar">
@@ -18,7 +18,7 @@ permalink: /search/
 </div>
 
 <!-- Script pointing to jekyll-search.js -->
-<script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
+<!-- <script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script> --> -->
 
 <!-- <script type="text/javascript">
 SimpleJekyllSearch({
@@ -34,7 +34,64 @@ SimpleJekyllSearch({
 </script> -->
 
 
-<script type="text/javascript">
+<div class="common-header search">
+    <div class="search">
+      <i class="fas fa-search fa-fw"></i>
+      <input id="search-input" 
+        type="search" 
+        tabindex="1" 
+        spellcheck="false" 
+        placeholder="Search"
+      >
+    </div>
+  </div>
+  
+  <ul id="search-results"></ul>
+
+
+  <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+
+  <script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{ site.baseurl }}/search.json',
+      searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false,
+      exclude: ['Welcome']
+    })
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script type="text/javascript">
 SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
@@ -122,7 +179,7 @@ SimpleJekyllSearch({
     fuzzy: false,
     exclude: ['Welcome']
 });
-</script>
+</script> -->
 
 <!-- <script>
     const pointColor = getComputedStyle(document.documentElement).getPropertyValue('--point-color');
