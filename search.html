@@ -36,7 +36,7 @@ SimpleJekyllSearch({
 <script>
     const pointColor = getComputedStyle(document.documentElement).getPropertyValue('--point-color');
   
-    window.simpleJekyllSearch = new SimpleJekyllSearch({
+    simpleJekyllSearch = new SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
       json: '{{ site.baseurl }}/search.json',
@@ -116,7 +116,7 @@ SimpleJekyllSearch({
       limit: 100
     });
   
-    window.onload = function() {
-      window.simpleJekyllSearch.search(document.getElementById('search-input').value);
-    };
+    // window.onload = function() {
+    //   window.simpleJekyllSearch.search(document.getElementById('search-input').value);
+    // };
   </script>
