@@ -4,7 +4,7 @@
   window.simpleJekyllSearch = new SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('search-results'),
-    json: '{{ site.baseurl }}/assets/json/search-data.json',
+    json: '{{ site.baseurl }}/assets/js/search-data.js',
     searchResultTemplate: `
       <li>
         <div>
