@@ -39,30 +39,31 @@ SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     json: '{{ site.baseurl }}/search.json',
-    searchResultTemplate: 
-    '<li>
-            <div>
-                <i class="fas fa-folder fa-fw"></i>
-                <a href="{url}">{categories}</a>
-            </div>
-            <div>
-                <i class="fas fa-book fa-fw"></i>
-                <a href="{url}">{title}</a>
-            </div>
-            <div>
-                <i class="fas fa-tags fa-fw"></i>
-                <a href="{url}">{tags}</a>
-            </div>
-            <div>
-                <i class="fas fa-calendar-alt fa-fw"></i>
-                <a href="{url}">{date}</a>
-            </div>
-            <div>
-                <i class="fas fa-link fa-fw"></i>
-                <a href="{url}" style="font-size: 1rem;">{urlString}</a>
-            </div>
-        </li>',
-    // searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
+    // searchResultTemplate: `
+    //     <li>
+    //         <div>
+    //             <i class="fas fa-folder fa-fw"></i>
+    //             <a href="{url}">{categories}</a>
+    //         </div>
+    //         <div>
+    //             <i class="fas fa-book fa-fw"></i>
+    //             <a href="{url}">{title}</a>
+    //         </div>
+    //         <div>
+    //             <i class="fas fa-tags fa-fw"></i>
+    //             <a href="{url}">{tags}</a>
+    //         </div>
+    //         <div>
+    //             <i class="fas fa-calendar-alt fa-fw"></i>
+    //             <a href="{url}">{date}</a>
+    //         </div>
+    //         <div>
+    //             <i class="fas fa-link fa-fw"></i>
+    //             <a href="{url}" style="font-size: 1rem;">{urlString}</a>
+    //         </div>
+    //     </li>
+    // `,
+    searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}{category}</a></li>',
     // templateMiddleware: function(prop, value, template) {
     //     if (prop === 'url') {
     //         return value;
