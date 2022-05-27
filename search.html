@@ -39,8 +39,8 @@ SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     json: '{{ site.baseurl }}/search.json',
-    searchResultTemplate: `
-        <li>
+    searchResultTemplate: 
+    '<li>
             <div>
                 <i class="fas fa-folder fa-fw"></i>
                 <a href="{url}">{categories}</a>
@@ -61,8 +61,7 @@ SimpleJekyllSearch({
                 <i class="fas fa-link fa-fw"></i>
                 <a href="{url}" style="font-size: 1rem;">{urlString}</a>
             </div>
-        </li>
-    `,
+        </li>',
     // searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
     // templateMiddleware: function(prop, value, template) {
     //     if (prop === 'url') {
