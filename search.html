@@ -31,7 +31,6 @@ permalink: /search/
     // searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
     searchResultTemplate: `
     <li>
-      {%- if paginator.posts.size > 0 -%}
 <div class="pagination">
   <!-- Post list links -->
   <ul class="post-list">
@@ -75,7 +74,6 @@ permalink: /search/
     {%- include views/paginator.html -%}
   {%- endif -%}
 </div>
-{%- endif -%}
       </li>
     `,
   //   templateMiddleware: function(prop, value, template) {
