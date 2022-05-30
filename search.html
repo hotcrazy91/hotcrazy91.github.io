@@ -37,10 +37,11 @@ permalink: /search/
   {%- assign paginator = site -%}
 {%- endif -%}
 
-{%- if paginator.posts.size > 10 -%}
+{%- if paginator.posts.size > 0 -%}
 <div class="pagination">
   <!-- Post list links -->
   <ul class="post-list">
+    {%- paginator={query} -%}
     {%- for post in paginator.posts -%}
     <li>
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
