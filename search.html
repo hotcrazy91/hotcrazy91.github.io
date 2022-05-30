@@ -70,13 +70,11 @@ SimpleJekyllSearch({
   
   windows.simpleJekyllSearch = new SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('search-container'),
+    resultsContainer: document.getElementById('results-container'),
     // json: '{{ site.baseurl }}/assets/json/search-data.json',
     json: '{{ site.baseurl }}/search.json',
     searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-    noResultsText: '',
-    limit: 100
-  });
+
   //   searchResultTemplate: `
   //     <li>
   //       <div>
@@ -150,6 +148,9 @@ SimpleJekyllSearch({
     
   //   return value;
   // },
+  noResultsText: '',
+    limit: 100
+  });
 
   
   // windows.onload = function() {
