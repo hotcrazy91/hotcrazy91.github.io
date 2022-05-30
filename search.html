@@ -42,13 +42,9 @@ permalink: /search/
   <!-- Post list links -->
   <ul class="post-list">
     {%- for post in paginator.posts -%}
-    {%- if post == "{query}" -%}
-    {%- if page.paginator -%}
-  {%- assign paginator = page.paginator -%}
-{%- elsif paginator == nil -%}
-  {%- assign paginator = site -%}
-{%- endif -%}
+
     <li>
+      {%- if post == "{query}" -%}
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
       {% assign article = post.content %}
@@ -78,8 +74,9 @@ permalink: /search/
         <a class="post-tag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">#{{tag}}</a>
         {%- endfor -%}
       </div>
+      {%- endif -%}
     </li>
-    {%- endif -%}
+
     {%- endfor -%}
 
   </ul>
