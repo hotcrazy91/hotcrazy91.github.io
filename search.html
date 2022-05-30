@@ -65,10 +65,10 @@ SimpleJekyllSearch({
   })
 </script> -->
 
-  <script>
+<script>
     const pointColor = getComputedStyle(document.documentElement).getPropertyValue('--point-color');
   
-    simpleJekyllSearch = new SimpleJekyllSearch({
+    windows.simpleJekyllSearch = new SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('search-container'),
       // json: '{{ site.baseurl }}/assets/json/search-data.json',
@@ -149,10 +149,10 @@ SimpleJekyllSearch({
       limit: 100
     });
   
-    onload = function() {
-      simpleJekyllSearch.search(document.getElementById('search-input').value);
-    };
-  </script>
+    // onload = function() {
+    //   simpleJekyllSearch.search(document.getElementById('search-input').value);
+    // };
+</script>
 
 
 
