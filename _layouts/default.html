@@ -19,7 +19,8 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        {{ content }}
+        "content": {{ page.content | jsonify }}
+        <!-- {{ content }} -->
       </div>
     </main>
 
