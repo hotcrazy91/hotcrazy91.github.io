@@ -42,7 +42,7 @@ permalink: /search/
   <!-- Post list links -->
   <ul class="post-list">
     {%- for post in paginator.posts -%}
-    {%- if post = '{query}' -%}
+    {%- if post == '{query}' -%}
     <li>
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
