@@ -84,10 +84,6 @@ SimpleJekyllSearch({
           <i class="fas fa-book fa-fw"></i>
           <a href="{url}">{title}</a>
         </div>
-        // <div>
-        //   <i class="fas fa-tags fa-fw"></i>
-        //   <a href="{url}">{tags}</a>
-        // </div>
         <div class="post-tags">
           {%- for tag in page.tags -%}
           <a class="post-tag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">#{{tag}}</a>
