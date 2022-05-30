@@ -30,7 +30,6 @@ permalink: /search/
     // json: '{{ site.baseurl }}/search.json',
     // searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
     searchResultTemplate: `
-    <li>
 <div class="pagination">
   <!-- Post list links -->
   <ul class="post-list">
@@ -74,7 +73,6 @@ permalink: /search/
     {%- include views/paginator.html -%}
   {%- endif -%}
 </div>
-      </li>
     `,
   //   templateMiddleware: function(prop, value, template) {
   //     if (prop === 'url') {
