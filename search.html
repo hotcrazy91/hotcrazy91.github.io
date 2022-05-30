@@ -84,11 +84,13 @@ SimpleJekyllSearch({
           <i class="fas fa-book fa-fw"></i>
           <a href="{url}">{title}</a>
         </div>
-        <div class="post-tags">
-          {%- for tag in page.tags -%}
-          <a class="post-tag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">#{{tag}}</a>
-          {%- endfor -%}
-        </div>
+        {%- if page.tags.size > 0 -%}
+          <div class="post-tags">
+            {%- for tag in page.tags -%}
+            <a class="post-tag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">#{{tag}}</a>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
         <div>
           <i class="fas fa-calendar-alt fa-fw"></i>
           <a href="{url}">{date}</a>
