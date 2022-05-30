@@ -91,21 +91,22 @@ permalink: /search/
           a[a.length - 1][1] = b[1];
         }
           return a;
-    }, []);
+      }, []);
   
-    for (let i = 0; i < ranges.length; i++) {
-      ranges[i][0] += i * 7;
-      ranges[i][1] += i * 7 + 3;
-    }
-    for (const range of ranges) {
-      value = value.insert('<b>', range[0]).insert('</b>', range[1]);
-    }
+      for (let i = 0; i < ranges.length; i++) {
+        ranges[i][0] += i * 7;
+        ranges[i][1] += i * 7 + 3;
+      }
+
+      for (const range of ranges) {
+        value = value.insert('<b>', range[0]).insert('</b>', range[1]);
+      }
     
-    return value;
-  },
-  noResultsText: '',
-  limit: 100
-});
+      return value;
+    },
+    noResultsText: '',
+    limit: 100
+  });
   
   window.onload = function() {
     window.simpleJekyllSearch.search(document.getElementById('search-input').value);
