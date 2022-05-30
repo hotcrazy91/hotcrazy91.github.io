@@ -20,7 +20,7 @@ permalink: /search/
 <!-- Script pointing to jekyll-search.js -->
 <script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 SimpleJekyllSearch({
      searchInput: document.getElementById('search-input'),
      resultsContainer: document.getElementById('results-container'),
@@ -31,7 +31,7 @@ SimpleJekyllSearch({
      fuzzy: false,
      exclude: ['Welcome']
 });
-</script>
+</script> -->
 
 
 <!-- <div class="common-header search">
@@ -49,13 +49,13 @@ SimpleJekyllSearch({
 <ul id="search-results"></ul>
 
 
-<script src="/assets/js/simple-jekyll-search.min.js"></script>
+<script src="/assets/js/simple-jekyll-search.min.js"></script> -->
 
 
 <script>
   window.simpleJekyllSearch = new SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-result'),
+    resultsContainer: document.getElementById('results-container'),
     json: '{{ site.baseurl }}/search.json',
     searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
     noResultsText: 'No results found',
@@ -63,7 +63,7 @@ SimpleJekyllSearch({
     fuzzy: false,
     exclude: ['Welcome']
   })
-</script> -->
+</script>
 
   <!-- <script>
     const pointColor = getComputedStyle(document.documentElement).getPropertyValue('--point-color');
