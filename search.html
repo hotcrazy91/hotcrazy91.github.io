@@ -73,6 +73,9 @@ SimpleJekyllSearch({
     resultsContainer: document.getElementById('search-container'),
     // json: '{{ site.baseurl }}/assets/json/search-data.json',
     json: '{{ site.baseurl }}/search.json',
+    noResultsText: '',
+    limit: 100
+  });
   //   searchResultTemplate: `
   //     <li>
   //       <div>
@@ -146,9 +149,7 @@ SimpleJekyllSearch({
     
   //   return value;
   // },
-  noResultsText: '',
-  limit: 100
-  });
+
   
   // windows.onload = function() {
   //   simpleJekyllSearch.search(document.getElementById('search-input').value);
