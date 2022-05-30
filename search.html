@@ -44,11 +44,6 @@ permalink: /search/
     {%- for post in paginator.posts -%}
     {%- if post == "{query}" -%}
     <li>
-      {%- if page.paginator -%}
-  {%- assign paginator = page.paginator -%}
-{%- elsif paginator == nil -%}
-  {%- assign paginator = site -%}
-{%- endif -%}
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
       {% assign article = post.content %}
