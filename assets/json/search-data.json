@@ -2,6 +2,12 @@
 layout: none
 ---
 [
+  {%- if page.paginator -%}
+    {%- assign paginator = page.paginator -%}
+  {%- elsif paginator == nil -%}
+    {%- assign paginator = site -%}
+  {%- endif -%}
+
   {% for post in site.posts %}
     {
       "title"      : {{ post.title | jsonify }},
