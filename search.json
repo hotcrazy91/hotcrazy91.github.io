@@ -2,15 +2,27 @@
 layout: none
 ---
 [
-  {% for post in site.posts %}
-    {
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date | date: '%Y.%m.%d'}}",
-      "urlString"  : "{{ post.url }}"
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+  {%- if page.paginator -%}
+    {%- assign paginator = page.paginator -%}
+  {%- elsif paginator == nil -%}
+    {%- assign paginator = site -%}
+  {%- endif -%}
 
+  {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+  {%- include functions.html func='get_reading_time' -%}
+  {% assign reading_time = return %}
+  
+  {%- if paginator.posts.size > 0 -%}
+    {% for post in site.posts %}
+      {
+        "url"           : "{{ post.url | relative_url }}",
+        "date"          : "{{ post.date | date: date_format }}",
+        "title"         : "{{ post.title | escape }}",
+        "categories"    : "{{ post.categories | join: ' > ' }}",
+        "tags"          : "{{ post.tags | join: ', ' }}",
+        "urlString"     : "{{ post.url }}"
+        
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  {%- endif -%}
 ]
