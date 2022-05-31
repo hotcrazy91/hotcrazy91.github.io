@@ -9,7 +9,9 @@ layout: none
   {%- endif -%}
 
   {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-
+  {% assign article = post.content %}
+  {% assign lang = post.lang %}
+  
   {%- if paginator.posts.size > 0 -%}
     {% for post in site.posts %}
       {
