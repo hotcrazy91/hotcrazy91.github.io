@@ -56,7 +56,7 @@ permalink: /search/
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
 
-      {%- if page.post == {query} -%}
+      {%- if post == {query} -%}
       
       <h2 class="post-title">
         <a class="post-link" href="{{ post_url }}">
