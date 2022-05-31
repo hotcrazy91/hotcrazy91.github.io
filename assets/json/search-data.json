@@ -12,7 +12,7 @@ layout: none
     {% for post in site.posts %}
       {
         "url"        : "{{ post.url | relative_url }}",
-        "title"      : "{{ post.title | jsonify }}",
+        "title"      : "{{ post.title | escape }}",
         "categories" : "{{ post.categories | join: ' > ' }}",
         "tags"       : "{{ post.tags | join: ', ' }}",
         "urlString"  : "{{ post.url }}"

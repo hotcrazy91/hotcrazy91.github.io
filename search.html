@@ -32,12 +32,14 @@ permalink: /search/
 
     searchResultTemplate: `
     <li>
-        <div>
-          <a href="{url}">{categories}</a>
-        </div>
-        <div>
-          <a href="{url}">{article}</a>
-        </div>
+      <h2 class="post-title">
+        <a href="{url}">{article}</a>
+          { title }
+        </a>
+      </h2>
+      <div>
+        <a href="{url}">{article}</a>
+      </div>
     <li>
     `
   ,
