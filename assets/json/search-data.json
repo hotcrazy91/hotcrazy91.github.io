@@ -13,8 +13,8 @@ layout: none
   {%- if paginator.posts.size > 0 -%}
     {% for post in site.posts %}
       {
-        "title"      : {{ post.title | jsonify }},
-        "article"    : {{ post.content | jsonify }},
+        "title"      : "{{ post.title | jsonify }}",
+        "article"    : "{{ post.content | jsonify }}",
         "categories" : "{{ post.categories | join: ' > ' }}",
         "tags"       : "{{ post.tags | join: ', ' }}",
         "date"       : "{{ date | date_format | jsonify }}",
