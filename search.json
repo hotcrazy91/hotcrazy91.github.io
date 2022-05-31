@@ -2,11 +2,11 @@
 layout: none
 ---
 [
-  {%- if page.paginator -%}
-    {%- assign paginator = page.paginator -%}
-  {%- elsif paginator == nil -%}
-    {%- assign paginator = site -%}
-  {%- endif -%}
+  {% if page.paginator %}
+    {% assign paginator = page.paginator %}
+  {% elsif paginator == nil %}
+    {% assign paginator = site %}
+  {% endif %}
 
   {% for post in site.posts %}
     {
