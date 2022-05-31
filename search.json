@@ -10,7 +10,7 @@ layout: none
 
   {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
   // {%- include functions.html func='get_reading_time' -%}
-  {% assign reading_time = return %}
+  // {% assign reading_time = return %}
   
   {%- if paginator.posts.size > 0 -%}
     {% for post in site.posts %}
