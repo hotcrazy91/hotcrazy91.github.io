@@ -12,9 +12,9 @@ layout: none
 
   {%- if paginator.posts.size > 0 -%}
     {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-    {%- include functions.html func='get_reading_time' -%}
+    {%- include functions.html func="get_reading_time" -%}
     {% assign reading_time = return %}
-    
+
     {% for post in site.posts %}
       {
         "url"           : "{{ post.url | relative_url }}",
