@@ -10,14 +10,17 @@ layout: none
 
   {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
-  {% assign article = post.content %}
-  {% assign lang = post.lang %}
-  {%- include functions.html func='get_reading_time' -%}
-  {% assign reading_time = return %}
+
   
   {%- if paginator.posts.size > 0 -%}
 
     {% for post in paginator.posts %}
+      {% assign article = post.content %}
+      {% assign lang = post.lang %}
+    
+      {%- include functions.html func='get_reading_time' -%}
+      {% assign reading_time = return %}
+      
       {
         "url"           : "{{ post.url | relative_url }}",
         "date"          : "{{ post.date | date: date_format }}",
