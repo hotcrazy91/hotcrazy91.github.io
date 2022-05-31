@@ -12,9 +12,7 @@ layout: none
 
 
   {%- if paginator.posts.size > 0 -%}
-    {%- include functions.html func='get_reading_time' -%}
-    {% assign reading_time = return %}
-    
+
     {% for post in paginator.posts %}
       {
         "url"           : "{{ post.url | relative_url }}",
