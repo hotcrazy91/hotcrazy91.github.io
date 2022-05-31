@@ -46,8 +46,8 @@ permalink: /search/
     <li>
       
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+
       
-      {%- if post == "{query}" -%}
       {% assign article = post.content %}
       {% assign lang = post.lang %}
       {%- include functions.html func='get_reading_time' -%}
@@ -55,7 +55,8 @@ permalink: /search/
       {%- include functions.html func='get_article_excerpt' -%}
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
-
+      
+      {%- if post == "{query}" -%}
       <h2 class="post-title">
         <a class="post-link" href="{{ post_url }}">
           {{ post.title | escape }}
