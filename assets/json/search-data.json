@@ -8,13 +8,10 @@ layout: none
     {%- assign paginator = site -%}
   {%- endif -%}
 
-
-
   {%- if paginator.posts.size > 0 -%}
     {% for post in site.posts %}
       {
         "title"      : "{{ post.title | jsonify }}",
-        "article"    : "{{ post.content | jsonify }}",
         "categories" : "{{ post.categories | join: ' > ' }}",
         "tags"       : "{{ post.tags | join: ', ' }}",
         "urlString"  : "{{ post.url }}",
