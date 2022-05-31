@@ -28,21 +28,21 @@ permalink: /search/
     resultsContainer: document.getElementById('search-results'),
     json: '{{ site.baseurl }}/assets/json/search-data.json',
     // json: '{{ site.baseurl }}/search.json',
-    // searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+    searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
 
-    searchResultTemplate: `
-    <li>
-      <h2 class="post-title">
-        <a href="{url}">
-          {title}
-        </a>
-      </h2>
-      <div>
-          <a href="{url}">{article}</a>
-      </div>
-    <li>
-    `
-  ,
+  //   searchResultTemplate: `
+  //   <li>
+  //     <h2 class="post-title">
+  //       <a href="{url}">
+  //         {title}
+  //       </a>
+  //     </h2>
+  //     <div>
+  //         <a href="{url}">{article}</a>
+  //     </div>
+  //   <li>
+  //   `
+  // ,
     noResultsText: '',
     limit: 100
   });
