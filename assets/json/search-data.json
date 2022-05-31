@@ -16,7 +16,7 @@ layout: none
         "title"      : {{ post.title | jsonify }},
         "categories" : "{{ post.categories | join: ' > ' }}",
         "tags"       : "{{ post.tags | join: ', ' }}",
-        "date"       : "{{ post.date | site.yat.date_format | default: '%b %-d, %Y' }}",
+        "date"       : "{{ date_format }}",
         "urlString"  : "{{ post.url }}",
         "url"        : "{{ post.url | prepend: site.baseurl }}"
       }{% unless forloop.last %},{% endunless %}
