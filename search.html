@@ -41,7 +41,6 @@ permalink: /search/
 <div class="pagination">
   <!-- Post list links -->
   <ul class="post-list">
-    {%- if paginator.posts == "{query}" -%}
     {%- for post in paginator.posts -%}
 
     <li>
@@ -57,8 +56,8 @@ permalink: /search/
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
 
+      {%- if page.post == "{query}" -%}
       
-
       <h2 class="post-title">
         <a class="post-link" href="{{ post_url }}">
           {{ post.title | escape }}
