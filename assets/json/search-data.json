@@ -9,10 +9,9 @@ layout: none
   {%- endif -%}
 
 
+
   {%- if paginator.posts.size > 0 -%}
     {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-
-
     {% for post in site.posts %}
       {
         "url"           : "{{ post.url | relative_url }}",
