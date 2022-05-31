@@ -12,7 +12,7 @@ layout: none
 
 
   {%- if paginator.posts.size > 0 -%}
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       {
         "url"           : "{{ post.url | relative_url }}",
         "date"          : "{{ post.date | date: date_format }}",
