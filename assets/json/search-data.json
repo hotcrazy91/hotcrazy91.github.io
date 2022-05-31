@@ -8,10 +8,13 @@ layout: none
     {%- assign paginator = site -%}
   {%- endif -%}
 
+  {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+
   {%- if paginator.posts.size > 0 -%}
     {% for post in site.posts %}
       {
         "url"        : "{{ post.url | relative_url }}",
+        "date"       : "{{ post.date | date: date_format }}",
         "title"      : "{{ post.title | escape }}",
         "categories" : "{{ post.categories | join: ' > ' }}",
         "tags"       : "{{ post.tags | join: ', ' }}",

@@ -31,12 +31,17 @@ permalink: /search/
     // searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
 
     searchResultTemplate: `
+    <li>
       <h2 class="post-title">
         <a href="{url}">{title}</a>
       </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i>{date}</span>
+      </div>
       <div>
           <a href="{url}">{article}</a>
       </div>
+    <li>
     `
   ,
     noResultsText: '',
