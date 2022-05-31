@@ -38,8 +38,10 @@ permalink: /search/
       <div class="post-meta">
         <span class="post-date"><i class="fa fa-calendar"></i>{date}</span>
       </div>
-      <div>
-          <a href="{url}">{article}</a>
+      <div class="post-tags">
+        {%- for tag in {tags} -%}
+        <a class="post-tag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">#{{tag}}</a>
+        {%- endfor -%}
       </div>
     <li>
     `
