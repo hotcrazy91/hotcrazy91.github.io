@@ -14,10 +14,10 @@ layout: none
     {% for post in site.posts %}
       {
         "title"      : {{ post.title | jsonify }},
-        "article"    : {{ post.content }},
+        "article"    : {{ post.content | jsonify }},
         "categories" : "{{ post.categories | join: ' > ' }}",
         "tags"       : "{{ post.tags | join: ', ' }}",
-        "date"       : "{{ date | date_format }}",
+        "date"       : "{{ date | date_format | jsonify }}",
         "urlString"  : "{{ post.url }}",
         "url"        : "{{ post.url | prepend: site.baseurl }}"
       }{% unless forloop.last %},{% endunless %}
