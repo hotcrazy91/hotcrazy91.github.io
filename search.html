@@ -30,7 +30,7 @@ permalink: /search/
     // json: '{{ site.baseurl }}/search.json',
     // searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
 
-    searchResultTemplate: '
+    searchResultTemplate: `
     <li>
       <div class="pagination">
       <!-- Post list links -->
@@ -38,7 +38,6 @@ permalink: /search/
         <li>
         {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
-      
         {% assign article = post.content %}
         {% assign lang = post.lang %}
         {%- include functions.html func='get_reading_time' -%}
@@ -47,7 +46,6 @@ permalink: /search/
         {% assign excerpt = return %}
         {%- assign post_url = post.url | relative_url -%}
 
-      
       
         <h2 class="post-title">
           <a class="post-link" href="{{ post_url }}">
@@ -76,7 +74,7 @@ permalink: /search/
   {%- if paginator.posts.size < site.posts.size -%}
     {%- include views/paginator.html -%}
   {%- endif -%}
-  </div>'
+  </div>`
   ,
     noResultsText: '',
     limit: 100
