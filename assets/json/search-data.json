@@ -8,7 +8,7 @@ layout: none
     {%- assign paginator = site -%}
   {%- endif -%}
 
-
+  {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
   {%- if paginator.posts.size > 0 -%}
     {% for post in site.posts %}
