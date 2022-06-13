@@ -24,7 +24,7 @@ layout: none
         "url"           : "{{ post.url | relative_url }}",
         "date"          : "{{ post.date | date: date_format }}",
         "title"         : "{{ post.title | escape }}",
-        "reading_time"  : "{{ reading_time }}",
+        "reading_time"  : "{{ post.reading_time }}",
         "categories"    : "{{ post.categories | join: ' > ' }}",
         "tags"          : "{{ post.tags | join: ', ' }}",
         "urlString"     : "{{ post.url }}"
