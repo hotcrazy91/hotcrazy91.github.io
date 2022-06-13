@@ -36,8 +36,6 @@ permalink: /search/
         <a href="{url}">{title}</a>
       </h2>
       <div class="post-meta">
-        {%- include functions.html func='get_reading_time' -%}
-        {% assign reading_time = return %}
         <span class="post-date"><i class="fa fa-calendar"></i>{date}</span>
         <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i>{reading_time}</span>
       </div>
